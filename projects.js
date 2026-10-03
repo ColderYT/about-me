@@ -11,7 +11,7 @@ const projects = [
     {
         name: "Night Island",
         description: "A dark horror project focused on atmosphere and mystery.",
-        image: "assets/projects/nothing.png",
+        image: "https://i.ibb.co/1t7jMcwW/Screenshot-2026-10-03-234131.png",
         tags: ["Game", "Horror", "Chill"],
         link: "#",
         status: "Live"
@@ -20,7 +20,7 @@ const projects = [
       {
         name: "DEAD SIGNAL",
         description: "A dark horror project focused on atmosphere and mystery.",
-        image: "assets/projects/project517.png",
+        image: "https://i.ibb.co/RLRbTqb/Screenshot-2026-10-03-233753.png",
         tags: ["Game", "Horror", "Top-Down 2D"],
         link: "#",
         status: "Live"
