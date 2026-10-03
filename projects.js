@@ -25,5 +25,13 @@ const projects = [
         link: "#",
         status: "Live"
     },
+          {
+        name: "MOZ://A",
+        description: "A cheat for Wig's AI Fortnite in 10H.",
+        image: "https://i.extremetech.com/imagery/content-types/01XbUPGHeKkplebr5vjW62j/hero-image.fit_lim.v1678673413.jpg",
+        tags: ["Game", "AI", "Cheat"],
+        link: "#",
+        status: "Live"
+    },
 
 ];
