@@ -2,7 +2,7 @@ const projects = [
     {
         name: "RiposteAI",
         description: "A modern AI chat interface built for the web.",
-        image: "assets/projects/riposteai.png",
+        image: "https://i.ibb.co/hJdCsXNp/riposteailogo.png",
         tags: ["AI", "Web", "JavaScript"],
         link: "https://riposteai.dedyn.io/",
         status: "Live"
@@ -11,7 +11,7 @@ const projects = [
     {
         name: "Night Island",
         description: "A dark horror project focused on atmosphere and mystery.",
-        image: "assets/projects/project517.png",
+        image: "assets/projects/nothing.png",
         tags: ["Game", "Horror", "Chill"],
         link: "#",
         status: "Live"
