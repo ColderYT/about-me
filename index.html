@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>COLDER — Developer</title>
+    <meta name="description" content="COLDER — Developer, creator and builder.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">COLDER</div>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="hero">
+            <p class="eyebrow">DEVELOPER • CREATOR • BUILDER</p>
+
+            <h1>
+                Building things<br>
+                <span>that shouldn't exist.</span>
+            </h1>
+
+            <p class="hero-description">
+                I'm COLDER. I build games, websites, applications
+                and experimental projects.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="button primary">
+                    View Projects
+                </a>
+
+                <a href="https://github.com/" target="_blank" class="button">
+                    GitHub ↗
+                </a>
+            </div>
+        </section>
+
+
+        <section id="about">
+
+            <div class="section-label">01 — ABOUT</div>
+
+            <div class="about-content">
+
+                <h2>
+                    Turning ideas<br>
+                    into <span>projects.</span>
+                </h2>
+
+                <p>
+                    I'm a developer who enjoys experimenting with
+                    games, web applications, AI and anything that
+                    gives me an excuse to build something new.
+                </p>
+
+                <p>
+                    Most of my projects start as random ideas and
+                    eventually turn into something people can actually use.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section id="projects">
+
+            <div class="section-header">
+                <div>
+                    <div class="section-label">02 — PROJECTS</div>
+                    <h2>Things I've built.</h2>
+                </div>
+
+                <span id="project-count"></span>
+            </div>
+
+            <div id="projects-grid"></div>
+
+        </section>
+
+
+        <section id="skills">
+
+            <div class="section-label">03 — SKILLS</div>
+
+            <h2>Tools I use.</h2>
+
+            <div class="skills">
+
+                <div>HTML</div>
+                <div>CSS</div>
+                <div>JavaScript</div>
+                <div>Lua</div>
+                <div>C++</div>
+                <div>Python</div>
+                <div>Git</div>
+                <div>GitHub</div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-logo">COLDER</div>
+
+        <p>
+            © 2026 COLDER. Built from scratch.
+        </p>
+
+        <a href="https://github.com/" target="_blank">
+            GitHub ↗
+        </a>
+
+    </footer>
+
+
+    <script src="projects.js"></script>
+
+    <script>
+
+        const grid = document.getElementById("projects-grid");
+        const count = document.getElementById("project-count");
+
+        count.textContent =
+            `${projects.length} PROJECT${projects.length === 1 ? "" : "S"}`;
+
+        projects.forEach(project => {
+
+            const card = document.createElement("article");
+
+            card.className = "project-card";
+
+            card.innerHTML = `
+
+                <div class="project-image">
+
+                    ${
+                        project.image
+                        ?
+                        `<img src="${project.image}" alt="${project.name}">`
+                        :
+                        `<div class="image-placeholder">◆</div>`
+                    }
+
+                    <span class="status">
+                        ${project.status}
+                    </span>
+
+                </div>
+
+                <div class="project-info">
+
+                    <h3>${project.name}</h3>
+
+                    <p>
+                        ${project.description}
+                    </p>
+
+                    <div class="tags">
+
+                        ${project.tags.map(tag =>
+                            `<span>${tag}</span>`
+                        ).join("")}
+
+                    </div>
+
+                    <a
+                        href="${project.link}"
+                        target="_blank"
+                        class="project-link"
+                    >
+                        View Project ↗
+                    </a>
+
+                </div>
+
+            `;
+
+            grid.appendChild(card);
+
+        });
+
+    </script>
+
+</body>
+</html>
